@@ -1,0 +1,1 @@
+{"name": "Testing Conventions", "slug": "conventions-testing", "kind": "conventions-pack", "description": "A consistent testing style from unit to E2E: Method_Scenario_Expected names, Arrange-Act-Assert, builders, page objects, and coverage floors.", "version": "1.0.0", "priceMinor": 0, "currency": "USD", "contentDir": "conventions"}
