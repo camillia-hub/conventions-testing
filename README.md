@@ -6,11 +6,11 @@ Conventions pack for Camillia workspaces: a consistent testing style across unit
 
 | File | Convention |
 | --- | --- |
-| `conventions/naming-and-structure.md` | `Method_Scenario_Expected` names and Arrange-Act-Assert phases. |
-| `conventions/unit-tests.md` | One assertion concept per test, test data builders, fixtures, doubles. |
-| `conventions/integration-tests.md` | The unit/integration split and ground rules for real infrastructure. |
-| `conventions/e2e-tests.md` | Journey-level specs with page objects and strict data isolation. |
-| `conventions/coverage.md` | Coverage floors per layer and what to test first in legacy code. |
+| `conventions/cam-ext-testing-naming-and-structure.md` | `Method_Scenario_Expected` names and Arrange-Act-Assert phases. |
+| `conventions/cam-ext-testing-unit-tests.md` | One assertion concept per test, test data builders, fixtures, doubles. |
+| `conventions/cam-ext-testing-integration-tests.md` | The unit/integration split and ground rules for real infrastructure. |
+| `conventions/cam-ext-testing-e2e-tests.md` | Journey-level specs with page objects and strict data isolation. |
+| `conventions/cam-ext-testing-coverage.md` | Coverage floors per layer and what to test first in legacy code. |
 
 ## Install
 
