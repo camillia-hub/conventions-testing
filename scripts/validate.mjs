@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Validates a Camillia conventions pack against the anti-collision placement
-// contract: hub.json declares the extension id, and every convention file is
+// contract: extension.json declares the extension id, and every convention file is
 // a flat conventions/cam-ext-<id>-<name>.md markdown document with an H1
 // heading and at least 1 KB of content.
 // Zero dependencies; requires Node.js 22 or later.
@@ -24,19 +24,19 @@ function fail(message) {
 
 let hub;
 try {
-  hub = JSON.parse(await readFile(join(repoRoot, 'hub.json'), 'utf8'));
+  hub = JSON.parse(await readFile(join(repoRoot, 'extension.json'), 'utf8'));
 } catch {
-  fail('hub.json is missing or not valid JSON');
+  fail('extension.json is missing or not valid JSON');
 }
 const id = hub.id;
 if (typeof id !== 'string' || !KEBAB_ID.test(id)) {
-  fail("hub.json must declare a unique kebab-case extension 'id'");
+  fail("extension.json must declare a unique kebab-case extension 'id'");
 }
 if (hub.kind !== 'conventions-pack') {
-  fail(`hub.json kind must be 'conventions-pack' (found '${hub.kind}')`);
+  fail(`extension.json kind must be 'conventions-pack' (found '${hub.kind}')`);
 }
 if (hub.contentDir !== 'conventions') {
-  fail(`hub.json contentDir must be 'conventions' (found '${hub.contentDir}')`);
+  fail(`extension.json contentDir must be 'conventions' (found '${hub.contentDir}')`);
 }
 
 let dirStat;
